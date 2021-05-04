@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>{% block head %}
+    <meta charset="UTF-8">
+    <link rel="icon" href="/static/favicon.ico">
+    <title>{% block title %}Exellero Art{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+{% endblock %}</head>
+{% block body %}<body class="text-center" style = "background-color: whitesmoke;">{% endblock %}
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        {% block navbar %}
+        <a class="navbar-brand" href="/home" style="color: cornflowerblue; font-size: x-large; font-family: Ebrima;">
+            <img src="/static/favicon.ico" alt="Logo" style="width:40px;">Exellero Art</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about" >About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tutorials">Tutorials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login_page">Log In</a>
+                </li>
+            </ul>
+         </div>
+        {% endblock %}
+    </nav>
+    <main role="main" class="inner cover">
+        {% block content %}
+        <img class="img-fluid" src="/static/Cover.jpg" alt="Main Page">
+        <p class="lead">
+            Art has always been a universal way to express feelings, thoughts or emotions one wants to share with the world - or keep it personal.
+            For a long time I kept my artwork a secret; however, those times are now in the past.
+        </p>
+        <p class="lead" style = "padding-bottom: 30px;">
+            The main purpose of this website is for it to serve as an online portfolio of my artworks, although its functionality doesn't end there.
+            Here you can also find tutorials and tricks on drawing in Photoshop made by me and that are based solely on my drawing experience - hopefully,
+            you will find them useful.
+        </p>
+        <p class="lead" style = "padding-bottom: 30px;">
+            I do accept commercial offers. If you want to place a commission or hire me for a project, feel free to contact me.
+        </p>
+        <p class="lead" style = "padding-bottom: 30px;">
+            <a href="/gallery" class="btn btn-lg btn-secondary">View Gallery</a>
+        </p>
+        {% endblock %}
+    </main>
+{% block footer %}
+    <footer class="footer">
+        <div class="container">
+            <a href="https://www.instagram.com/f3lc4t/?hl=en"><img src="/static/instagram.png" alt="Instagram" style="width: 30px; padding-top:5px;"></a>
+            <a href="https://www.artstation.com/exellero"><img src="/static/artstation.png" alt="ArtStation" style="width: 30px; padding-top:5px;"></a>
+            <a href="https://www.tumblr.com/tagged/exellero"><img src="/static/tumblr.png" alt="Tumblr" style="width: 30px; padding-top:5px;"></a>
+            <a href="https://vk.com/exellero"><img src="/static/vk.png" alt="VK" style="width: 30px; padding-top:5px;"></a>
+            <a href="https://twitter.com/exellero?lang=en"><img src="/static/twitter.png" alt="Twitter" style="width: 30px; padding-top:5px;"></a>
+
+        </div>
+    </footer>
+{% endblock %}
+
+
+</body>
+</html>

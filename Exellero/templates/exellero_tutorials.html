@@ -1,0 +1,86 @@
+{% extends "exellero_home.html" %}
+
+{% block title %} {{ super() }} - Tutorials {% endblock %}
+{% block body %} <body class="text-center"> {% endblock %}
+
+{% block navbar %}
+        <a class="navbar-brand" href="/home" style="color: purple; font-size: x-large; font-family: Ebrima;">
+            <img src="/static/favicon.ico" alt="Logo" style="width:40px;">Exellero Art</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+        <div class="collapse navbar-collapse " id="collapsibleNavbar">
+            <ul class="navbar-nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about" >About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" style="background-color: purple" href="/tutorials">Tutorials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login_page">Log In</a>
+                </li>
+            </ul>
+         </div>
+{% endblock %}
+
+{% block  content %}
+        <h1 class="cover-heading" style="color: purple; padding-top: 40px; padding-bottom: 30px;">If you want to see a specific tutorial, you can request it below:</h1>
+        <div class="container" style ="color:plum; font-size: 20px">
+            {{ quick_form(form, '/tutorials') }}
+         </div>
+{% endblock %}
+
+{# The following 2 macros are based on the code from http://www.codetodd.com/flask-bootstrap-and-bootstrap-4-0/ #}
+{% macro form_group(field) -%}
+    <div class="form-group row required">
+        {{ field.label(class_="col-sm-2 col-form-label") }}
+        {% if field.type in ['MultiCheckboxField', 'RadioField'] %}
+            {% if field.errors %}
+                <div class="form-control is-invalid"></div>
+            {% else %}
+                <div class="form-control col-sm-8"></div>
+            {% endif %}
+            {% for choice in field %}
+                <div class="form-check form-check-inline">
+                    {{ choice(class_="form-check-input") }}
+                    {{ choice.label(class_="form-check-label") }}
+                </div>
+            {% endfor %}
+
+        {% else %}
+            {% if field.errors %}
+                {{ field(class_="form-control is-invalid") }}
+            {% else %}
+                {{ field(class_="form-control col-sm-8") }}
+            {% endif %}
+        {% endif %}
+        {% if field.errors %}
+            {%  for error in field.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endmacro %}
+
+{% macro quick_form(form, action) -%}
+    <form action="{{ action }}" class="form" method="POST">
+        {% for field in form %}
+            {% if field.type in ('HiddenField', 'CSRFTokenField') %}
+                {{ field() }}
+            {% elif field.type == 'SubmitField' %}
+                {{ field(class_="btn btn-primary") }}
+            {% else %}
+                {{ form_group(field) }}
+            {% endif %}
+        {% endfor %}
+    </form>
+{% endmacro %}

@@ -1,0 +1,47 @@
+{% extends "exellero_home.html" %}
+
+{% block title %} {{ super() }} - Gallery {% endblock %}
+{% block body %} <body class="text-center"> {% endblock %}
+
+{% block navbar %}
+        <a class="navbar-brand" href="/home" style="color: peru; font-size: x-large; font-family: Ebrima;">
+            <img src="/static/Cat.jpg" alt="Logo" style="width:40px;">Exellero Art</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about" >About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/gallery" style="background-color: tan;">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tutorials">Tutorials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login_page">Log In</a>
+                </li>
+            </ul>
+         </div>
+{% endblock %}
+
+{% block content %}
+        <img class="img-fluid" src="/static/Tree2.jpg" alt="Tree">
+        <h1 class="cover-heading" style="padding-bottom: 30px; color:peru;">Gallery</h1>
+
+        <a href="/gallery_2017"><img src="https://sun9-9.userapi.com/c840221/v840221834/427a1/MJbOjw6CU1M.jpg" alt="2017"></a>
+        <a href="/gallery_2018"><img src="https://sun9-70.userapi.com/c840628/v840628731/3c3aa/NY9_8rcYhRw.jpg" alt="2018"></a>
+        <a href="/gallery_2019"><img src="https://sun9-17.userapi.com/c849120/v849120533/e7356/9ZyYa59cunk.jpg" alt="2019"></a>
+
+        <a href="/gallery_inc_2017"><img src="https://sun9-52.userapi.com/c639828/v639828854/60bb7/Su9B-SmBHIQ.jpg" alt="2017 Inctober"></a>
+        <a href="/gallery_inc_2018"><img src="https://sun9-46.userapi.com/c844616/v844616485/10a3e7/I1PrlGvdL9g.jpg" alt="2018 Inctober"></a>
+        <a href="/gallery_inc_2019"><img src="https://sun9-72.userapi.com/c857536/v857536559/90842/u_V7il7P5K0.jpg" alt="2019 Inctober"></a>
+
+        <p class="lead" style = "padding-bottom: 100px;"></p>
+ {% endblock %}
+

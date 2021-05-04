@@ -1,0 +1,52 @@
+{% extends "exellero_home.html" %}
+
+{% block title %} {{ super() }} - About {% endblock %}
+{% block body %} <body class="text-center"> {% endblock %}
+
+{% block navbar %}
+        <a class="navbar-brand" href="/home" style="color: darkturquoise; font-size: x-large; font-family: Ebrima;">
+            <img src="/static/favicon.ico" alt="Logo" style="width:40px;">Exellero Art</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+        <div class="collapse navbar-collapse " id="collapsibleNavbar">
+            <ul class="navbar-nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/about" >About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tutorials">Tutorials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login_page">Log In</a>
+                </li>
+            </ul>
+         </div>
+{% endblock %}
+
+{% block content %}
+        <img class="img-fluid" src="https://sun9-57.userapi.com/c836139/v836139916/45b1/iH_PHGIpmIE.jpg" alt="About Image">
+        <h3 class="cover-heading">Background and Education</h3>
+        <p class="lead">
+           I was born in Moscow, Russia.
+        </p>
+        <p class="lead" style = "padding-bottom: 30px;">
+            I do not have a professional Arts diploma. However, I attended Arts high school back in Russia from the early 90's until the year of 2001 and
+              took several Art courses in the past 5 years.
+        </p>
+        <h3 class="cover-heading">Sources of Inspiration</h3>
+        <p class="lead" style = "padding-bottom: 30px;">
+            Usually I get inspiration from nature and music. However, I might get it from something as ordinary as random objects, textures or colour combinations.
+        </p>
+        <h3 class="cover-heading">What I Draw With</h3>
+        <p class="lead">Pencils </p>
+        <p class="lead">Pens </p>
+        <p class="lead">Markers </p>
+        <p class="lead" style = "padding-bottom: 100px;">Photoshop and this <a href="https://www.wacom.com/en-br/products/pen-displays/cintiq-13-hd">Tablet</a></p>
+{% endblock %}
