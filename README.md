@@ -1,4 +1,4 @@
-# Exellero-Art
+# Exellero Art
 Website that hypothetically represents an artist and displays her work
 
 # How to Run:
