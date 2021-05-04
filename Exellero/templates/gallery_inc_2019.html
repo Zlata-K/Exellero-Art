@@ -3,6 +3,33 @@
 {% block title %} {{ super() }} - Gallery 2019 (Ink) {% endblock %}
 {% block body %} <body class="text-center"> {% endblock %}
 
+{% block navbar %}
+        <a class="navbar-brand" href="/home" style="color: peru; font-size: x-large; font-family: Ebrima;">
+            <img src="/static/Cat.jpg" alt="Logo" style="width:40px;">Exellero Art</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about" >About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/gallery" style="background-color: tan;">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tutorials">Tutorials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login_page">Log In</a>
+                </li>
+            </ul>
+         </div>
+{% endblock %}
+        
 {% block content %}
         <h1 class="cover-heading" style="padding-bottom: 10px; padding-top:30px; color:peru;">2019 - Ink</h1>
         <p class="lead" style = "padding-bottom: 10px; ">
